@@ -23,7 +23,8 @@ body{background:var(--white);color:var(--text-primary);font-family:'Source Sans 
 .masthead{background:var(--white);border-bottom:3px solid var(--fab-blue-deep);padding:0 48px;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,51,141,0.08);}
 .masthead-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
 .logo-block{display:flex;align-items:center;gap:20px;}
-.logo-mark{width:44px;height:44px;background:var(--fab-blue-deep);color:white;display:flex;align-items:center;justify-content:center;font-family:'Libre Baskerville',serif;font-weight:700;font-size:18px;letter-spacing:-0.02em;border-radius:2px;}
+.logo-mark{height:46px;width:auto;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-mark img{height:46px;width:auto;display:block;}
 .logo-divider{width:1px;height:36px;background:var(--border);}
 .logo-text{display:flex;flex-direction:column;gap:1px;}
 .logo-text-main{font-weight:700;font-size:13px;letter-spacing:0.04em;color:var(--fab-blue-deep);text-transform:uppercase;}
@@ -252,7 +253,7 @@ body{background:var(--white);color:var(--text-primary);font-family:'Source Sans 
 <header class="masthead">
   <div class="masthead-inner">
     <div class="logo-block">
-      <div class="logo-mark">FAB</div>
+      <div class="logo-mark"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAABLCAMAAABuiKiaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEFUExURQAAAAA9pgA8p+ElGwA8puIjGgA8peEkGuAiGQA5pAA8pgA8pQA9pQA4p98kGuoVFeEkGQA8pQAAqgA8p+AjGeIjGQA7pQA8oeEjGgA6owAzmQA3pgA8peEhGgA5pgBAnwA8pQA7pAA8pgA8pQA8ogAzowA2owAAgAA6pP8AAAA8pgA6pP8AAAAAgAA5pgA8peEkGuAjGgAAAOAlGN8gGwA8pQA1p+EkGwArquElGuAkGuEkGgA8pQA7pAA6pAA9pQA9pQA9pgA8pAA5owArlQA9pQA9pgA4nwA8pgAzpgA8pQA8pgA8pQA3pAA6pQA8pgA8pgA9pQA7pQAwnwA7pgA7pQA7pIGt8GUAAABXdFJOUwD/lv/k4ff6Uob30rMg2gzgVQNd7ISlRPJLCi79TaAY/qPm+R4ZPQJcAb5GAwRI7fnqAac48x1wDNXg9+XIuNQ2xueyDMrsINcU43L8Knfr/ZNKEHlxu2mcl9oAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASKSURBVGhD5ZqHdhxFEEVnEFEEk3MwJkeDyGAwNmByDv//KVS43V3d0zOjWXm1nMO1drrq1et+s1qFPbaH/xYj6xZuYd2BI9bErawbGMdd7tk4OrrNi3yCnDUOt88e2B0EcdOdHAmUZd9q/nQWlH7Z5Y4QH8xneP6yzm5suVPTq3xexiY/vrhqUsHNSdcNmaYMbY2nly8+P8QfMV+KcoY2brkr6OR7m0RBy9BGSCffjcme84ky0UmNWI6L7lvv9jaJgpahLZAteO/G8Z5ckc/MViM143Bv0D2fNomClqFNEG24gtFeUr20+VNqEWcXnUTuI9lAs/O8siv0DygsjOa4QLBzP6om5WvkAYHSCPMHs3vpNpoZuQnUeR6SPzcPUjMPo8/DK3tTIDTA4FwgsoLROfAIiRXMzgECGxjuHeJamO4b0qYwV/THTBfmCoqAUECveJRZDdEKisGeKcwFBAWlgN7yGOMA2QqKwYYpzAUEAymDPIV5hmjlcSQD+xTmAoKBlEHugCFBtoLi4J7CvHE8gZhA7oEDyFZQHMxTmLcOxARqFywG0QoK4J3CfHiSHlATqF2wGGQrKIB3cnCGcQYZEINMr6AoZCsogHU1/ynW1fxwAwgC0QpKAuts/tNpzLqe39PIVlASWGfzmZb82oh2DvmhCqCdPh8hg3Uun6FOqXbJf4ZwASWDdUN+5UTq5j9Lv/TpX8l/juFFbajX8hGiRLaCksE7k8/Mh9Tj89Y5SGE7vYAgkC0gFPBuyY9WlB44FMIFhALmlmZYt94ZKB0wGIQLCAXcLfXQu/Z2FIQJjIFwAaGAv6Ueerch/xJjILwTv5hPPb5g3TC8SL+eL2AwSN813xqFvqdMwaGQvjH/JepT5dMf0ypIAumL+fQBBmH0MsL4CkJvO4KAcNZ8WgWlaLR906sIOf81+gDWTn76zd8Fz3J+FonvPP2FfPQ+r7cmegNpn/nJTreHfOQ5Whe9gbTXfPw01fY3kIr45vb8t5BncRtNtR1FQMifALoIzkk+6jyNzVvlbRQB5Uz59InLyAyog43eQNohH3ES306o+5jDeMfi36WLYN0h/6Tqepjfsfz3aCJYd8i3EWUXs4Plv08TwdsEoXXimxllDzMnLJ+6AvMu+R/EZoKbM5ue/4do+Z1PhJFQNTVuDWj+R9QR/PUOpM4xCrP5/I/dV/GJ5H9KfRAk/zPKg6AvAOVh+L/nyw1QHIhD50/+u4Gi369yoRuGK6z+ze21I8bPdfFOsdJNekqkaedpffTjF1I0+VdNCFpVntTmqlvAfOOX+gTkDf+19DzsX9+kGa9boT+HJX/4yv8ezkY+l4v72VDU8WsdrOFuybcDuOhiJ6Ui5Rd9GL+x0hs/RtfLSfV+Fd9l+Vc8D/WGHz2T/+04fuclufbxvf5StPK08eqWi+XrHfhqx/byfyBfh57/Y8k3teT/pPoqvpv8n+14FezhtzD+kvM1Sz8s6VcrTXP1RNXfsmr6Kr7b8n/Xo/4Y/0Q81lP+0qm/D5Dlb1208vP/0Q36sKFdRVXNVBssMgz/AgKaJirtESeVAAAAAElFTkSuQmCC" alt="First Abu Dhabi Bank"></div>
       <div class="logo-divider"></div>
       <div class="logo-text">
         <div class="logo-text-main">Asset Management</div>
